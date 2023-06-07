@@ -1,0 +1,32 @@
+    <main>
+        <div class="rows">
+            <h1><%= heading %></h1>
+            <table>
+                <tr>
+                    <th>Package Title</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+                <% data.forEach(eachData => { %>
+                <tr>
+                    <td><%= eachData.title %></td>
+                    <td>$<%= eachData.price %></td>
+                    <td><%= eachData.qty %></td>
+                    <td>$<%= (eachData.price*eachData.qty) %></td>
+                    <td>
+                        <form action="cart/remove/<%= eachData.id %>" method="post">
+                            <button type="submit">Remove</button>
+                        </form>
+                    </td>
+                </tr>
+                <% }); %>
+            </table>
+            <hr>
+            <ul>
+                <li><a href="checkout">Checkout</a></li>
+            </ul>
+        </div>
+        
+    </main>

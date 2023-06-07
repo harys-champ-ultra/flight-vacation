@@ -1,0 +1,13 @@
+<main>
+    <form action="/accountup" method="post">
+        <h1><%= heading %></h1>
+        <p><%= message %></p>
+        <input type="text" name="name" id="name" placeholder="Enter name">
+        <input type="email" name="email" id="email" placeholder="Enter email" required>
+        <input type="password" name="password" id="password" placeholder="Enter password">
+        <input type="submit" value="Sign Up">
+        <ul>
+            <li><a href="signin">Already user? Sign In.</a></li>
+        </ul>
+    </form>
+</main>

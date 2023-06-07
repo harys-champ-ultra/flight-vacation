@@ -1,0 +1,21 @@
+    <main>
+        <div class="rows">
+            <h1><%= heading %></h1>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Followed</th>
+                    <th>Price</th>
+                </tr>
+                <% data.forEach(eachData => { %>
+                <tr>
+                    <td><%= eachData.name %></td>
+                    <td><%= eachData.email %></td>
+                    <td><%= eachData.title %></td>
+                    <td>$<%= eachData.price %></td>
+                </tr>
+                <% }); %> 
+            </table>
+        </div>
+    </main>
